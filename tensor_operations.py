@@ -78,11 +78,11 @@ print('\n## Tensor dot\n')
 
 def naive_vector_dot(x, y):
 	assert len(x.shape) == 1
-    assert len(y.shape) == 1
-    assert x.shape[0] == y.shape[0]
+	assert len(y.shape) == 1
+	assert x.shape[0] == y.shape[0]
 
-    z = 0.
-    for i in range(x.shape[0]):
+	z = 0.
+	for i in range(x.shape[0]):
 		z += x[i] * y[i]		
 
 	return z
@@ -95,18 +95,18 @@ def naive_matrix_vector_dot(x, y):
 
 	z = np.zeros(x.shape[0])
 	for i in range(x.shape[0]):
-        for j in range(x.shape[1]):
-            z[i] += x[i, j] * y[j]
-	
+	    for j in range(x.shape[1]):
+	        z[i] += x[i, j] * y[j]
+
 	return z
 
 
 def naive_matrix_vector_dot2(x, y):
-    z = np.zeros(x.shape[0])
-    for i in range(x.shape[0]):
-    	z[i] = naive_vector_dot(x[i, :], y)
+	z = np.zeros(x.shape[0])
+	for i in range(x.shape[0]):
+		z[i] = naive_vector_dot(x[i, :], y)
 
-    return z    	
+	return z    	
 
 
 def naive_matrix_dot(x, y):
@@ -114,7 +114,7 @@ def naive_matrix_dot(x, y):
 	assert len(y.shape) == 2
 	assert x.shape[1] == y.shape[0]
 
-    z = np.zeros((x.shape[0], y.shape[1]))
+	z = np.zeros((x.shape[0], y.shape[1]))
 	for i in range(x.shape[0]):
 		for j in range(y.shape[1]):
 			row_x = x[i, :]
@@ -125,43 +125,25 @@ def naive_matrix_dot(x, y):
 
 
 
+print('\n## Tensor reshaping\n')
+
+x = np.array([[0., 1.],
+                 [2., 3.],
+                 [4., 5.]])
+
+print(x)
+print(x.shape)
+
+x = x.reshape((6, 1))
+print(x)
+print(x.shape)
+
+x = x.reshape((2, 3))
+print(x)
+print(x.shape)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print('\ntransposition\n')
+x = np.zeros((300, 20))
+x = np.transpose(x)
+print(x.shape)
