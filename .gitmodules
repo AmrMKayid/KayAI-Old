@@ -4,3 +4,6 @@
 [submodule "reinforcement-learning"]
 	path = reinforcement-learning
 	url = https://github.com/AmrMKayid/reinforcement-learning.git
+[submodule "Deep_reinforcement_learning_Course"]
+	path = Deep_reinforcement_learning_Course
+	url = https://github.com/AmrMKayid/Deep_reinforcement_learning_Course
