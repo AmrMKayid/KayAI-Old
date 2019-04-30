@@ -1,9 +1,9 @@
 [submodule "OpenAI/spinningup"]
-	path = OpenAI/spinningup
+	path = DeepRL/OpenAI/spinningup
 	url = https://github.com/AmrMKayid/spinningup
 [submodule "reinforcement-learning"]
-	path = reinforcement-learning
+	path = DeepRL/reinforcement-learning
 	url = https://github.com/AmrMKayid/reinforcement-learning.git
 [submodule "Deep_reinforcement_learning_Course"]
-	path = Deep_reinforcement_learning_Course
+	path = DeepRL/Deep_reinforcement_learning_Course
 	url = https://github.com/AmrMKayid/Deep_reinforcement_learning_Course
